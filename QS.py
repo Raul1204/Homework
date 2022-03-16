@@ -1,6 +1,8 @@
+import certifi
+import ssl
 from urllib.request import urlopen
 local_name = "frankenstein.txt"
-url = "https:\\www.gutenberg.org/files/84/84-0.txt"
+url = "https:\\www.gutenberg.org/files/1342/1342-0.txt"
 
 
 def save_locally():
@@ -27,9 +29,9 @@ unique_words = get_unique_words()
 most_frequent = list(unique_words.values())
 most_frequent.sort(reverse=True)
 print(most_frequent)
-for word in most_frequent[:10]:
+for word in most_frequent[0:]:
     for unique_word, value in unique_words.items():
         if word == value:
-            print(f"common word '{unique_word}' appers {value} times")
+            print(f"common word'{unique_word}' appers {value} times")
             break
 

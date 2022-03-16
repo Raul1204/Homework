@@ -1,4 +1,0 @@
-Hi
-This is a file,
-this is pretty nice
-Bye
